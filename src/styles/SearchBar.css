@@ -1,0 +1,33 @@
+.SearchBar {
+    display: flex;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    padding-left: 5px;
+}
+
+.SearchInput {
+    display: flex;
+    width: 300px;
+    height: 25px;
+    margin-right: 10px;
+}
+
+.SearchButton {
+    display: flex;
+    width: fit-content;
+    height: fit-content;
+    padding: 3px;
+    border: 2px solid black;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.SearchButton:hover {
+    border: 2px solid red;
+    background-color: white;
+}
+
+.SearchButton:active {
+    color: white;
+    background-color: red;
+}
