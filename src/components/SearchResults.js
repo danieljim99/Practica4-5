@@ -8,7 +8,7 @@ const searchResults = (props) => {
     if(props.results) {
         result = (
             <div className="SearchResults">
-                {props.results.map((result, index) => {
+                {props.results.map((result) => {
                     return <SearchResult key={result.id.videoId} id={result.id.videoId} title={result.snippet.title} description={result.snippet.description} image={result.snippet.thumbnails.default.url} selectVideo={props.selectVideo}/>;
                 })}
             </div> 

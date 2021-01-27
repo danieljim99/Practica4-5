@@ -24,8 +24,9 @@ function App() {
       setSelectedVideo(response.data.items[0].player.embedHtml);
     })
     
-    axios.get(`${youtubeEndpoint}search?key=${apiKey}&relatedToVideoId=${videoId}&part=snippet&maxResults=50&type=video`).then(response => {
-      setRelatedTo(response.data.items);
+    axios.get(`${youtubeEndpoint}search?key=${apiKey}&relatedToVideoId=${videoId}&part=snippet&type=video&maxResults=50`).then(response => {
+      const relatedResults = response.data.items.filter(elem => elem.snippet);
+      setRelatedTo(relatedResults);
     })
   }
 
